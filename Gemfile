@@ -34,6 +34,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'bootstrap-sass', '~> 3.3.5'
+gem 'bootswatch-rails'
+
 group :test, :development do
   gem "rspec-rails"
   gem "capybara"
@@ -54,5 +57,5 @@ group :production do
   gem "rails_12factor"
 end
 
-gem "bootstrap-sass", "~> 3.1.1"
+
 

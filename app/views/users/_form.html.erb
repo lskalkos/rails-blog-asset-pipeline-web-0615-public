@@ -11,23 +11,42 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %><br>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %><br>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %><br>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation %><br>
-  </div>
-  <div class="actions">
-    <%= f.submit "Sign Up" %>
-  </div>
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="well bs-component">
+          <form class="form-horizontal">
+            <fieldset>
+              <legend>Sign Up</legend>
+              <div class="form-group">
+                <label for="inputEmail" class="col-lg-2 control-label"><%= f.label :email %></label>
+                <div class="col-lg-10">
+                  <%= f.text_field :email, class: "form-control", placeholder: "Email" %>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword" class="col-lg-2 control-label"><%= f.label :password %></label>
+                <div class="col-lg-10">
+                  <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword" class="col-lg-2 control-label"><%= f.label :password_confirmation %></label>
+                <div class="col-lg-10">
+                  <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Password Confirmation" %>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                  <button type="reset" class="btn btn-default">Cancel</button>
+
+                  <%= f.submit "Sign Up", class: "btn btn-primary" %>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+      </div>
+      <div class="col-lg-2 col-lg-offset-1">
+      </div>
+    </div>
 <% end %>
